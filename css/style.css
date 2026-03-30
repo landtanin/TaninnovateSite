@@ -4,7 +4,7 @@
 
 :root {
   --color-bg: #FFFFFF;
-  --color-surface: #FFFFFF;
+  --color-surface: #FAF7F2;
   --color-text: #333333;
   --color-text-mid: #555555;
   --color-text-light: #999999;
@@ -116,15 +116,14 @@ a:hover {
 }
 
 .nav-logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
 }
 
-.nav-logo:hover {
-  color: var(--color-accent);
+.nav-logo-img {
+  height: 28px;
+  width: auto;
 }
 
 .nav-toggle {
