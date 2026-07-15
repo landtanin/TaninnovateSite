@@ -3,117 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taninnovate &mdash; Bespoke websites, iPad &amp; iPhone apps</title>
-  <meta name="description" content="Taninnovate is a product studio building software tools for industries that move fast.">
-  <meta property="og:title" content="Taninnovate &mdash; Bespoke websites, iPad &amp; iPhone apps">
-  <meta property="og:description" content="A product studio building software tools, based in the UK.">
+  <title>Taninnovate — Senior-led software and website consultancy</title>
+  <meta name="description" content="Taninnovate designs and builds bespoke business software, native iPhone and iPad apps, and clear, credible websites for growing organisations.">
+  <link rel="canonical" href="https://taninnovate.com/">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Taninnovate — Software that makes the work simpler">
+  <meta property="og:description" content="Senior-led software consultancy for bespoke systems, native apps, and business websites.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taninnovate.com/">
+  <meta property="og:image" content="https://taninnovate.com/images/taninnovate-consulting.webp">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Taninnovate",
+      "url": "https://taninnovate.com/",
+      "image": "https://taninnovate.com/images/taninnovate-consulting.webp",
+      "description": "Senior-led software consultancy building bespoke systems, native apps, and business websites.",
+      "founder": {
+        "@type": "Person",
+        "name": "Tanin Rojanapiansatith",
+        "sameAs": "https://www.linkedin.com/in/tanin-rojanapiansatith/"
+      },
+      "areaServed": "United Kingdom"
+    }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page-wrapper">
     <header class="site-header">
-      <nav class="container nav">
-        <a href="index.html" class="nav-logo">
-          <img src="images/taninnovate-logo-300.png" alt="Taninnovate" class="nav-logo-img">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a href="index.html" class="brand" aria-label="Taninnovate home">
+          <img src="images/taninnovate-mark.png" alt="" class="brand-mark" width="42" height="42">
+          <span class="brand-name">Taninnovate</span>
         </a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
           <span class="nav-toggle-bar"></span>
         </button>
-        <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Projects</a></li>
-          <li><a href="contact.html" class="btn btn-primary btn-sm">Contact</a></li>
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="#services">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About Tanin</a></li>
+          <li><a href="contact.html" class="btn btn-primary btn-sm">Start a project</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
-        <div class="container">
-          <h1>Bespoke websites, iPad &amp; iPhone apps.</h1>
-          <p>From construction inspections to speech-to-text &mdash; we build tools that solve real problems on the ground.</p>
-          <div class="hero-actions">
-            <a href="work.html" class="btn btn-primary">See our work</a>
-            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-outline">Let's talk</a>
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="hero-kicker"><span aria-hidden="true"></span> Senior-led software consultancy</p>
+            <h1>Software that makes <em>the work simpler.</em></h1>
+            <p class="hero-lead">Taninnovate designs and builds websites, iPhone and iPad apps, and bespoke systems for growing organisations, working directly with a senior engineer from first conversation to launch.</p>
+            <div class="hero-actions">
+              <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book a 30-minute consultation <span aria-hidden="true">↗</span></a>
+              <a href="work.html" class="text-link">See the work <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="hero-assurance">No sales team. No hand-off. You work directly with Tanin.</p>
+          </div>
+
+          <figure class="hero-visual" data-reveal>
+            <img src="images/taninnovate-consulting.webp" alt="A software consultant and client reviewing a responsive website together on desktop and mobile" width="1448" height="1086" fetchpriority="high">
+            <figcaption><span class="status-dot" aria-hidden="true"></span> Websites · Native apps · Bespoke systems</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="experience-strip" aria-label="Founder experience">
+        <div class="container experience-inner">
+          <p><strong>10 years of senior engineering experience</strong>, shaped at organisations including Capital One and Backbase. That experience is now applied directly to growing businesses.</p>
+          <a href="about.html">Meet Tanin <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="section section-intro">
+        <div class="container intro-grid">
+          <h2 data-reveal>You may not need more software. You may need the right one.</h2>
+          <div class="intro-copy" data-reveal>
+            <p>Most projects start with friction: a process that takes too long, a system people work around, or a website that no longer reflects the quality of the business.</p>
+            <p>Taninnovate turns that friction into a focused digital product, scoped around the result it needs to create rather than the amount of technology it can contain.</p>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section services" id="services">
         <div class="container">
-          <div class="section-header">
-            <h2>What we've worked on</h2>
+          <div class="section-heading" data-reveal>
+            <h2>Three ways we can help</h2>
+            <p>Choose the outcome that sounds closest. We can work out the implementation together.</p>
           </div>
-          <div class="card-grid">
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="8" y="4" width="26" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
-                <rect x="14" y="44" width="26" height="36" rx="3" stroke="currentColor" stroke-width="2" transform="translate(6 -4)" style="display:none"/>
-                <line x1="14" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="14" y1="20" x2="28" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="14" y1="26" x2="22" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M30 28l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Material Audit</h3>
-              <p>iPad-based inspection and audit platform. Built for demolition and construction.</p>
-              <a href="work.html#material-audit">Learn more &rarr;</a>
+
+          <div class="service-list">
+            <article class="service-row" data-reveal>
+              <p class="service-type">Bespoke operational software</p>
+              <div>
+                <h3>Replace the manual process your team has outgrown.</h3>
+                <p>Purpose-built tools for inspections, audits, reporting, scheduling, and the workflows that generic software cannot quite fit.</p>
+              </div>
+              <p class="service-fit"><strong>Good fit when</strong> spreadsheets, paper, or disconnected tools are costing time and visibility.</p>
             </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="14" y="2" width="20" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
-                <circle cx="24" cy="32" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="18" y1="6" x2="30" y2="6" stroke="currentColor" stroke-width="2"/>
-                <path d="M20 16l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <line x1="18" y1="27" x2="27" y2="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <path d="M32 40l4 4m0 0l4-4m-4 4V38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Transcrybr</h3>
-              <p>Offline speech-to-text for iPhone and iPad. Transcribe live or upload audio &mdash; all on-device, fully private.</p>
-              <a href="work.html#transcrybr">Learn more &rarr;</a>
+
+            <article class="service-row" data-reveal>
+              <p class="service-type">Native iPhone &amp; iPad apps</p>
+              <div>
+                <h3>Put the workflow where the work actually happens.</h3>
+                <p>Reliable native apps for teams in the field, including offline-first capture, device features, secure storage, and clear reporting.</p>
+              </div>
+              <p class="service-fit"><strong>Good fit when</strong> the job happens on-site, on the move, or away from dependable Wi-Fi.</p>
             </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="18" y="6" width="12" height="22" rx="6" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 24c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18" y1="42" x2="30" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <h3>ToastHost</h3>
-              <p>Club management platform for Toastmasters. Co-founded to solve real problems in public speaking communities.</p>
-              <a href="work.html#toasthost">Learn more &rarr;</a>
+
+            <article class="service-row" data-reveal>
+              <p class="service-type">Business websites</p>
+              <div>
+                <h3>Make your expertise easier to understand and easier to buy.</h3>
+                <p>Clear positioning, thoughtful design, and a maintainable website that gives the right people confidence to start a conversation.</p>
+              </div>
+              <p class="service-fit"><strong>Good fit when</strong> your current site undersells the quality, clarity, or credibility of the business.</p>
             </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
-                <ellipse cx="24" cy="24" rx="8" ry="18" stroke="currentColor" stroke-width="2"/>
-                <line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="2"/>
-                <line x1="9" y1="14" x2="39" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="9" y1="34" x2="39" y2="34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <h3>Blackheath Advisors</h3>
-              <p>Professional website for a board advisory practice. Designed and delivered in one week on Wix.</p>
-              <a href="work.html#blackheath-advisors">Learn more &rarr;</a>
-            </article>
+          </div>
+
+          <div class="service-cta" data-reveal>
+            <p>Not sure which route fits?</p>
+            <a href="contact.html" class="text-link">Describe the problem; we’ll help frame it <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-preview">
+        <div class="container">
+          <div class="section-heading section-heading-row" data-reveal>
+            <div>
+              <h2>Work that is being used, not just launched</h2>
+              <p>Selected outcomes across construction, energy procurement, and community software.</p>
+            </div>
+            <a href="work.html" class="text-link">View all projects <span aria-hidden="true">→</span></a>
+          </div>
+
+          <article class="case-study case-study-featured" data-reveal>
+            <div class="case-media browser-frame browser-frame-light">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><b>Material Audit</b></div>
+              <img src="images/work-material-audit.webp" alt="Material Audit app showing materials placed directly on a building floor plan" width="1016" height="635" loading="lazy">
+            </div>
+            <div class="case-copy">
+              <p class="case-client">Salter Construction · Construction audit app</p>
+              <h3>From site notes to a usable audit, without the rework.</h3>
+              <p>We built an audit application for a £4m-turnover construction business. The team uses it on an ongoing basis to capture site information, organise evidence, and generate clearer outputs.</p>
+              <dl class="outcome-list">
+                <div><dt>30%</dt><dd>reduction in project time</dd></div>
+                <div><dt>120%</dt><dd>increase in job profitability</dd></div>
+              </dl>
+              <a href="work.html#material-audit" class="text-link">Read the project story <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="case-study case-study-reverse" data-reveal>
+            <div class="case-media browser-frame browser-frame-purple">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><b>primeprocurement.co.uk</b></div>
+              <img src="images/work-prime-procurement.webp" alt="Prime Procurement website section explaining fee transparency, invoice assurance, contract strategy, and procurement controls" width="1080" height="1080" loading="lazy">
+            </div>
+            <div class="case-copy">
+              <p class="case-client">Prime Procurement · Website strategy &amp; build</p>
+              <h3>A credible digital home for a new energy procurement consultancy.</h3>
+              <p>We clarified the positioning, structured the services, designed the visual language, and launched a responsive Framer website that the founder can manage independently.</p>
+              <blockquote class="compact-quote">
+                <p>“Professional, thoughtful, and cost-conscious.”</p>
+                <cite>Samuel Stevens, Founder</cite>
+              </blockquote>
+              <a href="https://www.primeprocurement.co.uk/" target="_blank" rel="noopener" class="text-link">Visit Prime Procurement <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="case-study" data-reveal>
+            <div class="case-media browser-frame browser-frame-blue">
+              <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><b>ToastHost</b></div>
+              <img src="images/work-toasthost.webp" alt="ToastHost meeting agenda showing role assignments, timing, voting, and feedback tools" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="case-copy">
+              <p class="case-client">ToastHost · Club management platform</p>
+              <h3>More of the meeting spent speaking. Less of it spent administering.</h3>
+              <p>We digitised and scaled a manual evaluation and meeting workflow for Toastmasters clubs, combining agendas, role management, feedback, and club operations in one platform.</p>
+              <dl class="outcome-list">
+                <div><dt>20%</dt><dd>meeting time saved</dd></div>
+                <div><dt>20%</dt><dd>admin time reduced</dd></div>
+              </dl>
+              <a href="work.html#toasthost" class="text-link">See how ToastHost works <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section founder-section">
+        <div class="container founder-grid">
+          <figure class="founder-photo" data-reveal>
+            <img src="images/tanin-rojanapiansatith.webp" alt="Tanin Rojanapiansatith, founder of Taninnovate" width="512" height="590" loading="lazy">
+          </figure>
+          <div class="founder-copy" data-reveal>
+            <p class="founder-label">The person behind the work</p>
+            <h2>Your project stays senior-led.</h2>
+            <p class="founder-lead">I’m Tanin, a software engineer with 10 years’ experience building dependable digital products for organisations ranging from global banks to growing UK businesses.</p>
+            <p>You will work with me directly through discovery, design decisions, development, and launch. That keeps context intact, decisions quick, and the result close to the original business need.</p>
+            <ul class="founder-points">
+              <li>Senior engineering experience at Capital One and Backbase</li>
+              <li>Native iOS, web platforms, workflow automation, and product strategy</li>
+              <li>Commercially focused communication without unnecessary jargon</li>
+            </ul>
+            <div class="founder-actions">
+              <a href="about.html" class="btn btn-dark">More about Tanin</a>
+              <a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener" class="text-link">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section">
+        <div class="container process-grid">
+          <div class="process-intro" data-reveal>
+            <h2>A straightforward way to get from friction to working software.</h2>
+            <p>Enough structure to keep the project clear, with room to learn as the real solution takes shape.</p>
+          </div>
+          <ol class="process-list">
+            <li data-reveal>
+              <span>1</span>
+              <div><h3>Understand the work</h3><p>We map the problem, the people affected, and what a worthwhile result needs to change.</p></div>
+            </li>
+            <li data-reveal>
+              <span>2</span>
+              <div><h3>Shape the smallest useful solution</h3><p>You get a clear recommendation, scope, and delivery route before committing to a full build.</p></div>
+            </li>
+            <li data-reveal>
+              <span>3</span>
+              <div><h3>Build, test, and launch</h3><p>We work in visible increments, test with real use cases, and support the handover after launch.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-inner" data-reveal>
+          <div>
+            <h2>What is taking more time than it should?</h2>
+            <p>Bring the rough problem. You do not need a finished brief or a preferred technology.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-light">Book a consultation <span aria-hidden="true">↗</span></a>
+            <a href="contact.html" class="cta-text-link">Or send a project note <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>&copy; 2026 Taninnovate.</p>
-        <ul class="footer-links">
-          <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="Taninnovate home">
+            <img src="images/taninnovate-mark.png" alt="" class="brand-mark" width="42" height="42">
+            <span class="brand-name">Taninnovate</span>
+          </a>
+          <p>Practical software for organisations ready to work more clearly.</p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About Tanin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Start a conversation</h2>
+          <ul class="footer-links">
+            <li><a href="mailto:tanin@taninnovate.com">tanin@taninnovate.com</a></li>
+            <li><a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener">Book a consultation ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span data-current-year>2026</span> Taninnovate Ltd.</p>
+        <p>Based in the UK · Working with organisations everywhere</p>
       </div>
     </footer>
   </div>

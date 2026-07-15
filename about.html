@@ -3,74 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About &mdash; Taninnovate</title>
-  <meta name="description" content="Taninnovate is a product studio building inspection tools and community platforms from the UK.">
-  <meta property="og:title" content="About &mdash; Taninnovate">
-  <meta property="og:description" content="Product studio building real-world software, based in the UK.">
-  <meta property="og:type" content="website">
+  <title>About Tanin — Founder of Taninnovate</title>
+  <meta name="description" content="Meet Tanin Rojanapiansatith, a senior software engineer with 10 years of experience and the founder behind every Taninnovate engagement.">
+  <link rel="canonical" href="https://taninnovate.com/about.html">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="About Tanin — Founder of Taninnovate">
+  <meta property="og:description" content="Senior software engineering experience, applied directly to practical business problems.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://taninnovate.com/images/tanin-rojanapiansatith.webp">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page-wrapper">
     <header class="site-header">
-      <nav class="container nav">
-        <a href="index.html" class="nav-logo">
-          <img src="images/taninnovate-logo-300.png" alt="Taninnovate" class="nav-logo-img">
-        </a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="work.html">Projects</a></li>
-          <li><a href="contact.html" class="btn btn-primary btn-sm">Contact</a></li>
-        </ul>
+      <nav class="container nav" aria-label="Primary navigation">
+        <a href="index.html" class="brand" aria-label="Taninnovate home"><img src="images/taninnovate-mark.png" alt="" class="brand-mark" width="42" height="42"><span class="brand-name">Taninnovate</span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+        <ul class="nav-links" id="primary-navigation"><li><a href="index.html#services">Services</a></li><li><a href="work.html">Work</a></li><li><a href="about.html" aria-current="page">About Tanin</a></li><li><a href="contact.html" class="btn btn-primary btn-sm">Start a project</a></li></ul>
       </nav>
     </header>
 
-    <main>
-      <section class="page-header">
-        <div class="container">
-          <h1>About</h1>
+    <main id="main-content">
+      <section class="about-hero">
+        <div class="container about-hero-grid">
+          <figure class="about-portrait" data-reveal>
+            <img src="images/tanin-rojanapiansatith.webp" alt="Tanin Rojanapiansatith in London" width="512" height="590">
+            <figcaption>Founder · Senior software engineer · Based in the UK</figcaption>
+          </figure>
+          <div class="about-hero-copy" data-reveal>
+            <p class="hero-kicker"><span aria-hidden="true"></span> About Tanin</p>
+            <h1>Senior experience, without the agency distance.</h1>
+            <p class="about-lead">I’m Tanin Rojanapiansatith, a software engineer with 10 years’ experience building products and platforms for organisations including Capital One, Backbase, and growing UK businesses.</p>
+            <p>I founded Taninnovate to bring that depth of engineering closer to the people with the problem. Clients work with me directly — from understanding what is getting in the way to making the final product dependable enough for everyday use.</p>
+            <div class="about-actions"><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener" class="btn btn-primary">See Tanin on LinkedIn <span aria-hidden="true">↗</span></a><a href="contact.html" class="text-link">Start a conversation <span aria-hidden="true">→</span></a></div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container about-intro">
-          <div class="about-photo">
-            <img src="images/Tanin_profile_image.jpg" alt="Tanin in London" loading="lazy">
-          </div>
-          <div class="about-content">
-            <h2>Our story</h2>
-          <p>We started as a software studio, but quickly realised the most interesting problems weren't in code &mdash; they were in the industries that hadn't been touched by good software yet. Demolition sites running on clipboards. Advisory firms with outdated web presences. Toastmasters clubs managing meetings over email chains. That gap between what technology could do and what people were actually using became our focus.</p>
-
-          <h2>Where it started</h2>
-          <p>Our first client was Salter Demolition. Their team recorded material audits by hand &mdash; notes in a spreadsheet, photos on a phone, matched up later. We built <a href="work.html#material-audit">Material Audit</a>: an iPad app where you upload your floor plan, capture materials and photos on the spot, and generate the full report in one tap. It cut their auditing time by more than 5x.</p>
-          <p>We also built the website for Blackheath Advisors &mdash; a board advisory practice run by an experienced governance consultant working with Chairs and CEOs. The brief was to create something that reflects the calibre of her work and gives prospective clients confidence from the first visit.</p>
-          <p>We specialise in iOS and iPad development &mdash; building native apps that feel right in your hands and work where you need them, not just where you have WiFi.</p>
-          <p>We're based in the UK, working under Taninnovate. We keep things lean, move quickly, and care deeply about shipping products that real people actually use.</p>
+      <section class="section about-story">
+        <div class="container story-grid">
+          <h2 data-reveal>Why Taninnovate exists</h2>
+          <div class="story-copy" data-reveal>
+            <p>The most interesting software problems are often hiding inside ordinary work: a construction audit held together by notes and photos, a speaking club losing valuable meeting time to administration, or a specialist business whose website makes its expertise harder to see.</p>
+            <p>Those problems need more than code. They need someone to understand the work, choose what not to build, and stay close enough to the users to see whether the result is genuinely better.</p>
+            <p>That is the role I want Taninnovate to play: a practical, senior technical partner for organisations that need meaningful improvement without unnecessary complexity.</p>
           </div>
         </div>
+      </section>
+
+      <section class="section experience-section">
+        <div class="container">
+          <div class="section-heading" data-reveal><h2>Experience that travels well</h2><p>Different industries, one consistent job: turn complexity into a system people can trust.</p></div>
+          <div class="experience-list">
+            <article data-reveal><p>Global organisations</p><h3>Capital One &amp; Backbase</h3><p>Senior software engineering experience in financial technology environments where reliability, security, and clear decisions matter.</p></article>
+            <article data-reveal><p>Operational software</p><h3>Salter Construction</h3><p>A construction-site audit application used on an ongoing basis, reducing project time by 30% and increasing job profitability by 120%.</p></article>
+            <article data-reveal><p>Community platforms</p><h3>ToastHost</h3><p>A digital meeting and club-management solution that reduced meeting and administration time while supporting a higher-quality member experience.</p></article>
+            <article data-reveal><p>Professional services</p><h3>Prime Procurement</h3><p>Positioning, design, and a maintainable website for an independent consultancy entering the market with a clear point of view.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section working-style">
+        <div class="container working-grid">
+          <div data-reveal><h2>What working directly with me changes</h2><p>There is no account layer translating the problem and no delivery hand-off halfway through the project.</p></div>
+          <div class="working-points">
+            <article data-reveal><h3>Context stays intact</h3><p>The person in the first conversation is also making the product decisions and building the result.</p></article>
+            <article data-reveal><h3>Trade-offs stay visible</h3><p>You get a clear explanation of cost, risk, and scope so decisions can be made commercially, not just technically.</p></article>
+            <article data-reveal><h3>Progress stays tangible</h3><p>Work is shared in usable increments, so feedback is based on something real rather than a long specification.</p></article>
+            <article data-reveal><h3>Support stays human</h3><p>After launch, you know who to call and do not have to re-explain how the product is meant to work.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="personal-note">
+        <div class="container personal-note-inner" data-reveal>
+          <p>“The best software should feel less like technology being introduced and more like a difficult part of the work finally becoming straightforward.”</p>
+          <span>Tanin Rojanapiansatith</span>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-inner" data-reveal><div><h2>Bring me the awkward workflow.</h2><p>We can work out whether it needs software, a better website, or a much smaller intervention.</p></div><div class="cta-actions"><a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-light">Book a consultation <span aria-hidden="true">↗</span></a><a href="contact.html" class="cta-text-link">Send a project note <span aria-hidden="true">→</span></a></div></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>&copy; 2026 Taninnovate.</p>
-        <ul class="footer-links">
-          <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
+      <div class="container footer-grid">
+        <div class="footer-brand"><a href="index.html" class="brand" aria-label="Taninnovate home"><img src="images/taninnovate-mark.png" alt="" class="brand-mark" width="42" height="42"><span class="brand-name">Taninnovate</span></a><p>Practical software for organisations ready to work more clearly.</p></div>
+        <div><h2>Explore</h2><ul class="footer-links"><li><a href="index.html#services">Services</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About Tanin</a></li></ul></div>
+        <div><h2>Start a conversation</h2><ul class="footer-links"><li><a href="mailto:tanin@taninnovate.com">tanin@taninnovate.com</a></li><li><a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener">Book a consultation ↗</a></li><li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div>
       </div>
+      <div class="container footer-bottom"><p>&copy; <span data-current-year>2026</span> Taninnovate Ltd.</p><p>Based in the UK · Working with organisations everywhere</p></div>
     </footer>
   </div>
-
   <script src="js/main.js"></script>
 </body>
 </html>
