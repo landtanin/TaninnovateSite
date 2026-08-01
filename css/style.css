@@ -242,9 +242,12 @@ a:hover {
   gap: var(--space-xl);
 }
 
+/* Circular clip: the source is a circular portrait on an off-white
+   square, so a radius short of 50% would leave a faint grey corner
+   showing against the white page. */
 .about-photo img {
   width: 200px;
-  border-radius: 8px;
+  border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
