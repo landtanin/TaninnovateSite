@@ -114,6 +114,76 @@
           </div>
         </div>
       </section>
+
+      <!-- =============================================================
+           Client testimonial. Hand-curated: the quote is copied in by
+           hand, not fetched. No API, no JS, no third-party script.
+
+           Why not the Google Places API: the `reviews` field bills at
+           Google's Enterprise tier, caps at 5 reviews chosen by Google,
+           and the Maps terms forbid storing review text. Review JSON-LD
+           on your own site is "self-serving" and ineligible for star
+           rich results, so do NOT add Review/AggregateRating markup.
+
+           TO UPDATE (~2 minutes):
+             1. Read your reviews:
+                https://maps.google.com/?cid=9936926971516108110
+             2. Replace the quote text, the name and the role below.
+             3. Keep it verbatim. Trim to ~45 words and mark any cut
+                with [&hellip;] &mdash; silent truncation is the honesty failure.
+             4. Adjust the star count and the visually-hidden "Rated N
+                out of 5." to match if it is ever not five.
+             5. git commit && git push origin main. Pages redeploys.
+
+           GOT A SECOND GOOD REVIEW? This layout is deliberately built
+           for one. Two quotes want a different composition &mdash; ask for
+           the "proof panel" or "accent rule" variant rather than
+           bolting a second <figure> onto this one.
+
+           NON-GOOGLE PROOF IS WELCOME HERE. The heading is "What
+           clients say", not "Google reviews", so a LinkedIn
+           recommendation or a client email works too &mdash; just change
+           the <cite> to name the real source.
+
+           TO ASK A CLIENT FOR A REVIEW: get the official short link
+           from Google Business Profile > "Ask for reviews". Note the
+           search.google.com/local/writereview endpoint needs the
+           ChIJ-style Place ID, NOT the numeric CID used above.
+           ============================================================= -->
+      <section class="section" id="testimonials" data-place-cid="9936926971516108110">
+        <div class="container">
+
+          <svg class="svg-sprite" aria-hidden="true">
+            <symbol id="icon-star" viewBox="0 0 20 20">
+              <path d="M10 1.6l2.58 5.23 5.77.84-4.17 4.07.98 5.75L10 14.77l-5.16 2.72.98-5.75L1.65 7.67l5.77-.84L10 1.6z"/>
+            </symbol>
+          </svg>
+
+          <figure class="testimonial-solo">
+            <div class="stars">
+              <span class="visually-hidden">Rated 5 out of 5.</span>
+              <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
+              <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
+              <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
+              <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
+              <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
+            </div>
+            <blockquote cite="https://maps.google.com/?cid=9936926971516108110">
+              <p>He took the time to understand what I wanted the website to achieve and translated that into a clean and credible site that reflects the business really well. [&hellip;] I'm really pleased with the finished website and would happily recommend Taninnovate to any business looking for a thoughtful, cost-conscious, and reliable web design partner.</p>
+            </blockquote>
+            <figcaption class="testimonial-source">
+              <span class="testimonial-author">Samuel</span>
+              <cite>Prime Procurement &middot; Google review</cite>
+            </figcaption>
+          </figure>
+
+          <div class="testimonial-actions">
+            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Let's talk</a>
+            <a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener" class="btn btn-outline">Read our reviews on Google &rarr;</a>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
