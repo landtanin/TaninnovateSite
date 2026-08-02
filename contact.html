@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.className="js"</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &mdash; Taninnovate</title>
-  <meta name="description" content="Get in touch with Tanin at Taninnovate. Whether you have a project in mind or just want to say hello.">
+  <meta name="description" content="Book a half-hour call with me, or send a message. You'll get a fixed quote and an honest answer about whether I'm the right person for the job.">
+  <link rel="canonical" href="https://taninnovate.com/contact.html">
   <meta property="og:title" content="Contact &mdash; Taninnovate">
-  <meta property="og:description" content="Get in touch with Tanin at Taninnovate.">
+  <meta property="og:description" content="Book a half-hour call with me, or send a message. Fixed quote, honest answer.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taninnovate.com/contact.html">
+  <meta property="og:image" content="https://taninnovate.com/images/og-taninnovate.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Chivo+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +28,7 @@
     <header class="site-header">
       <nav class="container nav">
         <a href="index.html" class="nav-logo">
-          <img src="images/taninnovate-logo-300.png" alt="Taninnovate" class="nav-logo-img">
+          <img src="images/logo-white.png" alt="Taninnovate" class="nav-logo-img" width="130" height="120">
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span class="nav-toggle-bar"></span>
@@ -38,40 +47,64 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Get in touch</h1>
-          <p>Whether you have a project in mind, want to discuss a product, or just want to say hello.</p>
+          <h1>Get in touch.</h1>
+          <p class="lede">Tell me what you're trying to build. You'll hear back from me, not from anyone else.</p>
         </div>
       </section>
 
       <section class="section">
-        <div class="container contact-layout">
-          <div class="contact-info">
-            <h2>Connect</h2>
-            <ul class="social-links">
-              <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <div class="container split">
+          <div class="contact-col">
+            <h2>The quickest route</h2>
+            <p>Book a half-hour call. No charge, no pitch deck. I'll tell you what it would take, roughly what it would cost, and whether I'm the right person for it.</p>
+            <p class="contact-cta">
+              <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
+            </p>
+
+            <ul class="direct">
+              <!-- EMAIL: add the direct address here once supplied.
+                   <li><span class="label">Email</span>
+                       <a href="mailto:ADDRESS">ADDRESS</a></li> -->
+              <li>
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">tanin-rojanapiansatith</a>
+              </li>
+              <li>
+                <span class="label">Reviews</span>
+                <a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener">5.0 on Google</a>
+              </li>
+              <li>
+                <span class="label">Based</span>
+                <span>United Kingdom</span>
+              </li>
             </ul>
           </div>
 
-          <form class="contact-form" action="https://formspree.io/f/xkoqnlyj" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+          <div class="contact-col">
+            <h2>Or send a message</h2>
+            <form class="contact-form" action="https://formspree.io/f/xkoqnlyj" method="POST">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">What are you trying to build?</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
 
-            <button type="submit" class="btn btn-primary">Send message</button>
-          </form>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>&copy; 2026 Taninnovate.</p>
+        <p>&copy; 2026 Taninnovate &mdash; built by Tanin Rojanapiansatith.</p>
         <ul class="footer-links">
+          <li><a href="work.html">Projects</a></li>
+          <li><a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener">Reviews</a></li>
           <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>

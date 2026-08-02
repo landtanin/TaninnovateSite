@@ -3,79 +3,142 @@
    ================================ */
 
 :root {
-  --color-bg: #FFFFFF;
-  --color-surface: #FAF7F2;
-  --color-text: #333333;
-  --color-text-mid: #555555;
-  --color-text-light: #999999;
-  --color-border: #e0e0e0;
-  --color-accent: #aa0000;
-  --color-accent-hover: #880000;
-  --color-accent-light: #fff5f5;
+  /* Colour — Committed oxblood on chroma-0 neutrals.
+     Neutrals are deliberately chroma 0: for a red brand, tinting the
+     neutrals "toward the brand hue" produces cream, which is the exact
+     look this redesign exists to avoid. Every pair below is measured
+     against WCAG 2.2 AA. */
+  --paper:       oklch(0.993 0 0);          /* #fdfdfd */
+  --paper-2:     oklch(0.968 0 0);          /* #f4f4f4 */
+  --ink:         oklch(0.185 0 0);          /* #131313  18.3:1 on paper */
+  --ink-2:       oklch(0.445 0 0);          /* #545454   7.4:1 on paper */
+  --rule:        oklch(0.870 0 0);          /* #d4d4d4  decorative */
+  --rule-strong: oklch(0.720 0 0);
 
-  --font-body: 'Ubuntu', sans-serif;
-  --font-heading: 'Raleway', sans-serif;
+  --brand:       oklch(0.463 0.190 29.2);   /* #aa0000   7.6:1 on paper, 7.8:1 vs white */
+  --brand-deep:  oklch(0.335 0.140 29.2);   /* #6d0000  12.5:1 on paper */
+  --brand-lift:  oklch(0.545 0.205 29.5);   /* #cc2217  hover */
 
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 4rem;
-  --space-2xl: 6rem;
+  --on-brand:    #ffffff;                   /* 7.8:1 on brand */
+  --on-brand-2:  oklch(0.880 0.050 29.2);   /* #f7ccc5   5.3:1 on brand */
+  --on-brand-rule: oklch(0.600 0.130 29.2);
 
-  --container-max: 1120px;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-mono: 'Chivo Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --section-y: clamp(3.5rem, 8vw, 6.5rem);
+
+  --container-max: 1180px;
   --container-pad: 1.5rem;
 
-  --transition: 200ms ease;
+  /* Semantic z-index scale. Never arbitrary values. */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 200;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 220ms;
+  --transition: var(--dur) var(--ease-out);
 }
 
 /* ================================
-   2. Typography
+   2. Base
    ================================ */
 
 body {
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-display);
   font-weight: 300;
+  font-size: 1.0625rem;
   line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
+  color: var(--ink);
+  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  line-height: 1.2;
+::selection {
+  background: var(--brand);
+  color: var(--on-brand);
 }
 
-h1 {
-  font-size: 1.75rem;
+/* One focus style for the whole site. The previous stylesheet had none. */
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 1px;
 }
 
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-p {
-  color: var(--color-text-mid);
-}
-
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-a:hover {
-  color: var(--color-accent-hover);
+.on-brand :focus-visible,
+.hero :focus-visible,
+.site-header :focus-visible,
+.closing :focus-visible {
+  outline-color: var(--on-brand);
 }
 
 /* ================================
-   3. Layout
+   3. Typography
+   ================================ */
+
+h1, h2, h3 {
+  font-weight: 800;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+/* -0.04em is the floor. Tighter and the letterforms touch. */
+h1 {
+  font-size: clamp(2.5rem, 7.5vw, 5.25rem);
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+  letter-spacing: -0.032em;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+
+p { text-wrap: pretty; }
+
+a {
+  color: var(--brand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+a:hover { color: var(--brand-lift); }
+
+.lede {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  max-width: 46ch;
+}
+
+/* Keyed labels, drafting-sheet style. Mono is used here because the
+   reference is a drawing title block, not as generic "technical" dressing. */
+.label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.measure { max-width: 68ch; }
+
+/* ================================
+   4. Layout
    ================================ */
 
 .container {
@@ -91,12 +154,23 @@ a:hover {
   min-height: 100vh;
 }
 
-.page-wrapper > main {
-  flex: 1;
+.page-wrapper > main { flex: 1; }
+
+.section { padding-block: var(--section-y); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-xl);
 }
 
-/* Content for screen readers only. Stays in the accessibility tree,
-   removed from the visual layout. */
+.section-head .label { color: var(--ink-2); }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -110,15 +184,15 @@ a:hover {
 }
 
 /* ================================
-   4. Header & Navigation
+   5. Header & Navigation
    ================================ */
 
 .site-header {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--brand);
+  color: var(--on-brand);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-sticky);
 }
 
 .nav {
@@ -129,16 +203,8 @@ a:hover {
   padding-block: var(--space-md);
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.nav-logo-img {
-  height: 28px;
-  width: auto;
-}
+.nav-logo { display: flex; align-items: center; }
+.nav-logo-img { height: 26px; width: auto; }
 
 .nav-toggle {
   background: none;
@@ -154,8 +220,7 @@ a:hover {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-text);
-  border-radius: 2px;
+  background-color: var(--on-brand);
   transition: var(--transition);
 }
 
@@ -164,18 +229,21 @@ a:hover {
   flex-direction: column;
   width: 100%;
   list-style: none;
-  gap: var(--space-xs);
+  gap: var(--space-2xs);
   padding-top: var(--space-md);
 }
 
-.nav-links--open {
-  display: flex;
-}
+.nav-links--open { display: flex; }
+
+/* Without JS the toggle can never fire, so the links would be unreachable
+   on mobile. Show them stacked instead and hide the dead button. */
+.no-js .nav-links { display: flex; }
+.no-js .nav-toggle { display: none; }
 
 .nav-links a:not(.btn) {
   display: block;
-  padding: var(--space-sm) 0;
-  color: var(--color-text-mid);
+  padding: var(--space-xs) 0;
+  color: var(--on-brand-2);
   font-weight: 500;
   font-size: 0.9375rem;
   text-decoration: none;
@@ -184,326 +252,368 @@ a:hover {
 
 .nav-links a:not(.btn):hover,
 .nav-links a:not(.btn)[aria-current="page"] {
-  color: var(--color-accent);
+  color: var(--on-brand);
 }
 
 /* ================================
-   5. Hero
+   6. Hero & title block
    ================================ */
 
 .hero {
-  padding: var(--space-2xl) 0;
+  background: var(--brand);
+  color: var(--on-brand);
 }
 
-.hero h1 {
-  max-width: 600px;
-  margin-bottom: var(--space-md);
-}
+.hero-inner { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2.5rem, 6vw, 4.5rem); }
 
-.hero p {
-  max-width: 520px;
-  font-size: 1.125rem;
-  margin-bottom: var(--space-lg);
+.hero h1 { max-width: 16ch; }
+.hero h1 .quiet { color: var(--on-brand-2); }
+
+.hero .lede {
+  margin-top: var(--space-lg);
+  color: var(--on-brand-2);
+  font-weight: 300;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-}
-
-/* ================================
-   6. Sections
-   ================================ */
-
-.section {
-  padding: var(--space-xl) 0;
-}
-
-.section-header {
-  margin-bottom: var(--space-lg);
-}
-
-.page-header {
-  padding: var(--space-xl) 0 var(--space-lg);
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-xl);
-}
-
-.page-header p {
-  margin-top: var(--space-sm);
-  font-size: 1.125rem;
-}
-
-/* About page */
-.about-intro {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-}
-
-/* Circular clip: the source is a circular portrait on an off-white
-   square, so a radius short of 50% would leave a faint grey corner
-   showing against the white page. */
-.about-photo img {
-  width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-}
-
-.about-content {
-  max-width: 720px;
-}
-
-.about-content h2 {
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-md);
-}
-
-.about-content h2:first-child {
-  margin-top: 0;
-}
-
-.about-content p {
-  margin-bottom: var(--space-md);
-}
-
-/* Product feature sections */
-.product-feature {
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.product-feature:last-of-type {
-  border-bottom: none;
-}
-
-.product-feature h2 {
-  font-size: 1.75rem;
-  margin-bottom: var(--space-sm);
-}
-
-.product-lead {
-  max-width: 640px;
-  font-size: 1.0625rem;
-  margin-bottom: var(--space-md);
-}
-
-.product-note {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
-  font-style: italic;
-  margin-bottom: var(--space-lg);
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
 }
 
-.tag {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  background: var(--color-accent-light);
-  color: var(--color-accent);
-  border-radius: 100px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-}
-
-.feature-list {
-  list-style: none;
-  max-width: 480px;
-}
-
-.feature-list li {
-  padding: var(--space-sm) 0;
-  color: var(--color-text-mid);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.feature-list li:last-child {
-  border-bottom: none;
-}
-
-.feature-list li::before {
-  content: "\2713";
-  color: var(--color-accent);
-  font-weight: 600;
-  margin-right: var(--space-sm);
-}
-
-/* Client work section */
-.client-work {
-  padding: var(--space-xl) 0;
-}
-
-.client-work h2 {
-  margin-bottom: var(--space-lg);
-}
-
-/* Contact */
-.contact-layout {
+/* The title block: what a drawing sheet puts in the corner.
+   minmax(0, 1fr) not 1fr — an `fr` track has an auto minimum, so a long
+   unbroken value ("Rojanapiansatith") would force the track wider than the
+   container and push the page into horizontal scroll. Single column on the
+   narrowest screens so the name never has to break mid-word. */
+.title-block {
+  border-top: 1px solid var(--on-brand-rule);
   display: grid;
-  gap: var(--space-xl);
+  grid-template-columns: minmax(0, 1fr);
 }
 
-.contact-info h2 {
-  font-size: 1.125rem;
-  margin-bottom: var(--space-sm);
+.title-block > div {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  border-bottom: 1px solid var(--on-brand-rule);
 }
 
-.contact-info p {
-  margin-bottom: var(--space-lg);
+.title-block dt {
+  color: var(--on-brand-2);
+  margin-bottom: var(--space-2xs);
 }
 
-.contact-info a {
-  font-size: 1.125rem;
-}
-
-.social-links {
-  list-style: none;
-  display: flex;
-  gap: var(--space-md);
+.title-block dd {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--on-brand);
 }
 
 /* ================================
-   7. Cards
+   7. Work entries
    ================================ */
 
-.card-grid {
+.entry {
   display: grid;
-  grid-template-columns: 1fr;
   gap: var(--space-lg);
+  padding-block: var(--space-2xl);
+  border-bottom: 1px solid var(--rule);
+  align-items: center;
 }
 
-.card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: var(--space-lg);
+.entry:last-of-type { border-bottom: 0; }
+
+.entry-body > p {
+  color: var(--ink-2);
+  max-width: 48ch;
+  margin-block: var(--space-sm) var(--space-lg);
+}
+
+.entry h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.entry h3 a:hover { color: var(--brand); }
+
+.entry-shot {
+  border: 1px solid var(--rule);
+  width: 100%;
+  height: auto;
   transition: box-shadow var(--transition);
 }
 
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+.entry:hover .entry-shot { box-shadow: 0 6px 22px rgb(0 0 0 / 0.10); }
 
-.card-icon {
-  width: 48px;
-  height: 48px;
-  color: var(--color-accent);
-  margin-bottom: var(--space-md);
-}
-
-.card h3 {
-  margin-bottom: var(--space-sm);
-}
-
-.card p {
-  margin-bottom: var(--space-md);
+/* Spec list: the drawing's schedule of parts. */
+.spec {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2xs) var(--space-lg);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-sm);
   font-size: 0.9375rem;
 }
 
-.card a {
+.spec dt {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
   font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-top: 0.35em;
+}
+
+.spec dd { font-weight: 500; }
+.spec .out { color: var(--brand-deep); font-weight: 700; }
+
+.entry-link {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  font-weight: 700;
   font-size: 0.9375rem;
+}
+
+.section-note {
+  margin-top: var(--space-xl);
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+
+/* No public artefact: say so, don't ship a grey box. */
+.no-shot {
+  border: 1px dashed var(--rule-strong);
+  background: var(--paper-2);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: 220px;
+}
+
+.no-shot .label { color: var(--ink-2); }
+.no-shot p { color: var(--ink-2); font-size: 0.9375rem; margin: 0; max-width: 34ch; }
+
+/* ================================
+   8. Testimonial
+   ================================ */
+
+.testimonial {
+  max-width: 46rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 0.1875rem;
+  color: var(--brand);
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.star { width: 1.125rem; height: 1.125rem; fill: currentColor; }
+
+.svg-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.testimonial blockquote p {
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--space-lg);
+  overflow-wrap: anywhere;
+}
+
+.testimonial figcaption { font-size: 0.9375rem; color: var(--ink-2); }
+.testimonial .who { display: block; font-weight: 700; color: var(--ink); }
+.testimonial cite { font-style: normal; }
+
+/* ================================
+   9. Closing block
+   ================================ */
+
+.closing {
+  background: var(--brand);
+  color: var(--on-brand);
+  padding-block: var(--section-y);
+}
+
+.closing h2 { max-width: 18ch; }
+.closing .lede { color: var(--on-brand-2); margin-top: var(--space-md); }
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--on-brand-rule);
+}
+
+.signature img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.signature .who { font-weight: 700; line-height: 1.35; }
+.signature .who span {
+  display: block;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  color: var(--on-brand-2);
+}
+
+.closing-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-xl);
 }
 
 /* ================================
-   8. Buttons
+   10. Buttons
    ================================ */
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
-  cursor: pointer;
   border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 }
 
-.btn-primary {
-  background-color: var(--color-accent);
-  color: #FFFFFF;
-}
+.btn-primary { background-color: var(--brand); color: var(--on-brand); }
+.btn-primary:hover { background-color: var(--brand-deep); color: var(--on-brand); }
 
-.btn-primary:hover {
-  background-color: var(--color-accent-hover);
-  color: #FFFFFF;
-}
+.btn-outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn-outline:hover { background: var(--brand); color: var(--on-brand); }
 
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-}
+/* On oxblood surfaces the polarity inverts. */
+.on-brand .btn-primary,
+.hero .btn-primary,
+.closing .btn-primary { background: var(--on-brand); color: var(--brand); }
+.on-brand .btn-primary:hover,
+.hero .btn-primary:hover,
+.closing .btn-primary:hover { background: var(--on-brand-2); color: var(--brand-deep); }
 
-.btn-outline:hover {
-  background-color: var(--color-accent);
-  color: #FFFFFF;
-}
+/* Border must read as a control boundary against oxblood, so it uses
+   on-brand-2 (5.3:1) rather than the hairline rule colour. */
+.on-brand .btn-outline,
+.hero .btn-outline,
+.closing .btn-outline { color: var(--on-brand); border-color: var(--on-brand-2); }
+.on-brand .btn-outline:hover,
+.hero .btn-outline:hover,
+.closing .btn-outline:hover { background: var(--brand-deep); border-color: var(--brand-deep); color: var(--on-brand); }
 
-.btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-}
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.875rem; }
 
 /* ================================
-   9. Forms
+   11. Page header (interior pages)
    ================================ */
+
+.page-header {
+  background: var(--brand);
+  color: var(--on-brand);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+.page-header h1 { font-size: clamp(2.25rem, 5.5vw, 3.75rem); }
+.page-header .lede { color: var(--on-brand-2); margin-top: var(--space-md); }
+
+/* ================================
+   12. Prose & forms
+   ================================ */
+
+.prose { max-width: 68ch; }
+.prose h2 { margin-top: var(--space-2xl); margin-bottom: var(--space-md); }
+.prose h2:first-child { margin-top: 0; }
+.prose p { margin-bottom: var(--space-md); color: var(--ink-2); }
+
+.split { display: grid; gap: var(--space-2xl); }
+
+/* height:auto is load-bearing. The <img> carries width/height attributes to
+   reserve space and avoid layout shift, and that height acts as a
+   presentational hint — aspect-ratio is ignored unless one axis is auto,
+   which rendered this 280x560. */
+.about-photo img {
+  width: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  max-width: 480px;
+  gap: var(--space-xs);
+  max-width: 30rem;
 }
 
 .contact-form label {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.875rem;
-  color: var(--color-text);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  background: var(--color-surface);
-  color: var(--color-text);
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
   font-size: 1rem;
   transition: border-color var(--transition);
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--color-accent);
+.contact-form textarea:focus { border-color: var(--brand); }
+
+.contact-form button { margin-top: var(--space-md); align-self: flex-start; }
+
+.contact-col > h2 + p {
+  margin-top: var(--space-sm);
+  color: var(--ink-2);
+  max-width: 46ch;
 }
 
-.contact-form button {
-  margin-top: var(--space-md);
-  align-self: flex-start;
+.contact-cta { margin-top: var(--space-lg); }
+.contact-col .contact-form { margin-top: var(--space-md); }
+
+.direct {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-lg);
 }
+
+.direct .label { color: var(--ink-2); display: block; margin-bottom: 2px; }
+.direct a { font-weight: 700; font-size: 1.0625rem; }
 
 /* ================================
-   10. Footer
+   13. Footer
    ================================ */
 
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  padding: var(--space-lg) 0;
-  margin-top: var(--space-2xl);
+  border-top: 1px solid var(--rule);
+  padding-block: var(--space-xl);
 }
 
 .footer-inner {
@@ -514,161 +624,80 @@ a:hover {
   text-align: center;
 }
 
-.footer-inner p {
-  font-size: 0.875rem;
-  color: var(--color-text-light);
+.footer-inner p { font-size: 0.875rem; color: var(--ink-2); }
+
+.footer-links { list-style: none; display: flex; gap: var(--space-lg); }
+.footer-links a { font-size: 0.875rem; font-weight: 500; }
+
+/* ================================
+   14. Motion
+   ================================ */
+
+/* The hero is visible by default; this animation enhances an already-
+   rendered state rather than gating it. No fill-mode, so if the animation
+   never runs the content is still there. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
 }
 
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: var(--space-md);
-}
+.hero h1,
+.hero .lede,
+.hero-actions { animation: rise 620ms var(--ease-out); }
+.hero .lede { animation-delay: 70ms; }
+.hero-actions { animation-delay: 140ms; }
 
-.footer-links a {
-  color: var(--color-text-light);
-  font-size: 0.875rem;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: var(--color-accent);
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ================================
-   11. Testimonials
+   15. Media Queries
    ================================ */
 
-/* Holds the <symbol> the star <use> elements reference. Not rendered. */
-.svg-sprite {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+@media (min-width: 520px) {
+  .title-block { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .title-block > div {
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border-right: 1px solid var(--on-brand-rule);
+  }
+  .title-block > div:nth-child(2n) { border-right: 0; }
 }
-
-.stars {
-  display: inline-flex;
-  gap: 0.1875rem;
-  color: var(--color-accent);
-}
-
-.star {
-  width: 1.125rem;
-  height: 1.125rem;
-  fill: currentColor;
-}
-
-.testimonial-solo {
-  max-width: 46rem;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.testimonial-solo .stars {
-  justify-content: center;
-  margin-bottom: var(--space-md);
-}
-
-.testimonial-solo blockquote p {
-  font-family: var(--font-heading);
-  font-weight: 200;
-  font-size: 1.375rem;
-  line-height: 1.45;
-  color: var(--color-text);
-  margin-bottom: var(--space-lg);
-  overflow-wrap: anywhere;
-}
-
-.testimonial-source {
-  font-size: 0.9375rem;
-  color: var(--color-text-mid);
-}
-
-.testimonial-author {
-  display: block;
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.testimonial-source cite {
-  font-style: normal;
-}
-
-.testimonial-actions {
-  margin-top: var(--space-xl);
-  display: flex;
-  gap: var(--space-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ================================
-   12. Media Queries
-   ================================ */
 
 @media (min-width: 768px) {
-  h1 {
-    font-size: 2.25rem;
-  }
+  :root { --container-pad: 2rem; }
 
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
+  .nav-toggle { display: none; }
 
   .nav-links {
     display: flex;
     flex-direction: row;
     width: auto;
     padding-top: 0;
-    gap: var(--space-lg);
+    gap: var(--space-xl);
     align-items: center;
   }
 
-  .about-intro {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+  .title-block { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .title-block > div { border-bottom: 0; border-right: 1px solid var(--on-brand-rule); }
+  .title-block > div:last-child { border-right: 0; }
 
-  .about-photo img {
-    width: 280px;
-    position: sticky;
-    top: calc(var(--space-xl) + 60px);
-  }
+  .entry { grid-template-columns: 1fr 1.15fr; gap: var(--space-2xl); }
+  .entry--flip .entry-body { order: 2; }
 
-  .card-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .split { grid-template-columns: 1fr 1fr; }
+  .split--photo { grid-template-columns: 280px 1fr; }
 
-  .testimonial-solo blockquote p {
-    font-size: 1.625rem;
-  }
+  .about-photo img { width: 280px; }
 
-  .contact-layout {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
+  .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 
 @media (min-width: 1024px) {
-  :root {
-    --container-pad: 2rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero {
-    padding: var(--space-2xl) 0 var(--space-xl);
-  }
+  .entry { gap: clamp(2rem, 5vw, 4.5rem); }
 }

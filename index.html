@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.className="js"</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taninnovate &mdash; Bespoke websites, iPad &amp; iPhone apps</title>
-  <meta name="description" content="Taninnovate is a product studio building software tools for industries that move fast.">
-  <meta property="og:title" content="Taninnovate &mdash; Bespoke websites, iPad &amp; iPhone apps">
-  <meta property="og:description" content="A product studio building software tools, based in the UK.">
+  <title>Taninnovate &mdash; You brief me. I build it.</title>
+  <meta name="description" content="I'm Tanin. I build bespoke websites and iPad apps for UK businesses. You deal with me directly &mdash; no account managers, nothing lost in the handover.">
+  <link rel="canonical" href="https://taninnovate.com/">
+  <meta property="og:title" content="Taninnovate &mdash; You brief me. I build it.">
+  <meta property="og:description" content="Bespoke websites, iPad and iPhone apps. You deal with me directly &mdash; no account managers, nothing lost in the handover.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taninnovate.com/">
+  <meta property="og:image" content="https://taninnovate.com/images/og-taninnovate.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Chivo+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +28,7 @@
     <header class="site-header">
       <nav class="container nav">
         <a href="index.html" class="nav-logo">
-          <img src="images/taninnovate-logo-300.png" alt="Taninnovate" class="nav-logo-img">
+          <img src="images/logo-white.png" alt="Taninnovate" class="nav-logo-img" width="130" height="120">
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span class="nav-toggle-bar"></span>
@@ -37,129 +46,114 @@
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h1>Bespoke websites, iPad &amp; iPhone apps.</h1>
-          <p>From construction inspections to speech-to-text &mdash; we build tools that solve real problems on the ground.</p>
+        <div class="container hero-inner">
+          <h1>You brief me. I build it. <span class="quiet">Nobody in between.</span></h1>
+          <p class="lede">I'm Tanin. I take the brief, write the code, and answer the email. There's no account manager to go through and nothing lost on the way.</p>
           <div class="hero-actions">
-            <a href="work.html" class="btn btn-primary">See our work</a>
-            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-outline">Let's talk</a>
+            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
+            <a href="work.html" class="btn btn-outline">See the work</a>
           </div>
+        </div>
+        <!-- The title block: what a drawing sheet puts in its corner. States
+             the positioning as specification rather than as a claim. -->
+        <dl class="container title-block">
+          <div>
+            <dt class="label">Built by</dt>
+            <dd>Tanin Rojanapiansatith</dd>
+          </div>
+          <div>
+            <dt class="label">Discipline</dt>
+            <dd>Web &amp; iPadOS</dd>
+          </div>
+          <div>
+            <dt class="label">Based</dt>
+            <dd>United Kingdom</dd>
+          </div>
+          <div>
+            <dt class="label">Typical lead time</dt>
+            <dd>1&ndash;4 weeks</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Work I've shipped</h2>
+            <span class="label">Every one is live &mdash; click through and judge it</span>
+          </div>
+
+          <article class="entry">
+            <div class="entry-body">
+              <h3><a href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener">Prime Procurement</a></h3>
+              <p>A nine-page marketing site for an independent UK energy consultancy, with a CMS-backed Insights section she publishes to without touching code.</p>
+              <dl class="spec">
+                <dt>Client</dt><dd>Energy procurement consultancy</dd>
+                <dt>Built on</dt><dd>Framer with a client-managed CMS</dd>
+                <dt>Handover</dt><dd>Domain and ownership transferred to the client</dd>
+              </dl>
+              <a class="entry-link" href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener">Visit the site &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-prime-procurement.jpg" width="900" height="563" loading="lazy"
+                 alt="The Prime Procurement homepage: a violet hero reading &ldquo;Energy procurement, made simple and clear.&rdquo;">
+          </article>
+
+          <article class="entry entry--flip">
+            <div class="entry-body">
+              <h3><a href="https://www.blackheathadvisors.com" target="_blank" rel="noopener">Blackheath Advisors</a></h3>
+              <p>A professional site for a board advisory practice working with Chairs and CEOs. Built on Wix so she maintains it herself, with no retainer and no dependency on me.</p>
+              <dl class="spec">
+                <dt>Client</dt><dd>Board advisory practice</dd>
+                <dt>Built on</dt><dd>Wix, client-maintained</dd>
+                <dt>Delivered</dt><dd class="out">Brief to live site in one week</dd>
+              </dl>
+              <a class="entry-link" href="https://www.blackheathadvisors.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-blackheath-advisors.jpg" width="900" height="563" loading="lazy"
+                 alt="The Blackheath Advisors homepage: serif headings reading Governance, Leadership, Culture, Strategy, beside a boardroom photograph.">
+          </article>
+
+          <article class="entry">
+            <div class="entry-body">
+              <h3><a href="https://www.transcrybr.com" target="_blank" rel="noopener">Transcrybr</a></h3>
+              <p>Offline speech-to-text for iPhone and iPad. Live dictation or uploaded audio, all processed on device so nothing leaves the phone. My own product, on the App Store.</p>
+              <dl class="spec">
+                <dt>Platform</dt><dd>iOS and iPadOS, native</dd>
+                <dt>Built on</dt><dd>On-device speech recognition</dd>
+                <dt>Status</dt><dd>Shipping on the App Store</dd>
+              </dl>
+              <a class="entry-link" href="https://www.transcrybr.com" target="_blank" rel="noopener">Visit the site &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-transcrybr.jpg" width="900" height="563" loading="lazy"
+                 alt="The Transcrybr site: an iPhone showing live transcription with a words-per-minute dial, beside a Download on the App Store badge.">
+          </article>
+
+          <p class="section-note">
+            Two more on the <a href="work.html">Projects page</a>, including an iPad audit platform that cut a demolition contractor's reporting time by more than 5&times;.
+          </p>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <div class="section-header">
-            <h2>What we've worked on</h2>
-          </div>
-          <div class="card-grid">
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M26 4L6 28h18l-2 16 20-24H24l2-16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Prime Procurement</h3>
-              <p>Marketing site for an independent UK energy consultancy. Built on Framer with a client-managed Insights CMS.</p>
-              <a href="work.html#prime-procurement">Learn more &rarr;</a>
-            </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="8" y="4" width="26" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
-                <rect x="14" y="44" width="26" height="36" rx="3" stroke="currentColor" stroke-width="2" transform="translate(6 -4)" style="display:none"/>
-                <line x1="14" y1="14" x2="28" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="14" y1="20" x2="28" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="14" y1="26" x2="22" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M30 28l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Material Audit</h3>
-              <p>iPad-based inspection and audit platform. Built for demolition and construction.</p>
-              <a href="work.html#material-audit">Learn more &rarr;</a>
-            </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="14" y="2" width="20" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
-                <circle cx="24" cy="32" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="18" y1="6" x2="30" y2="6" stroke="currentColor" stroke-width="2"/>
-                <path d="M20 16l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <line x1="18" y1="27" x2="27" y2="27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-                <path d="M32 40l4 4m0 0l4-4m-4 4V38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <h3>Transcrybr</h3>
-              <p>Offline speech-to-text for iPhone and iPad. Transcribe live or upload audio &mdash; all on-device, fully private.</p>
-              <a href="work.html#transcrybr">Learn more &rarr;</a>
-            </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="18" y="6" width="12" height="22" rx="6" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 24c0 6.627 5.373 12 12 12s12-5.373 12-12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="24" y1="36" x2="24" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18" y1="42" x2="30" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <h3>ToastHost</h3>
-              <p>Club management platform for Toastmasters. Co-founded to solve real problems in public speaking communities.</p>
-              <a href="work.html#toasthost">Learn more &rarr;</a>
-            </article>
-            <article class="card">
-              <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
-                <ellipse cx="24" cy="24" rx="8" ry="18" stroke="currentColor" stroke-width="2"/>
-                <line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="2"/>
-                <line x1="9" y1="14" x2="39" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="9" y1="34" x2="39" y2="34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <h3>Blackheath Advisors</h3>
-              <p>Professional website for a board advisory practice. Designed and delivered in one week on Wix.</p>
-              <a href="work.html#blackheath-advisors">Learn more &rarr;</a>
-            </article>
-          </div>
-        </div>
-      </section>
+          <!-- Hand-curated. The quote is copied in by hand, not fetched: the
+               Places API bills at Google's Enterprise tier, caps at five
+               reviews, and the Maps terms forbid storing review text.
+               Do NOT add Review/AggregateRating JSON-LD — self-serving markup
+               is ineligible and risks a domain-wide manual action.
 
-      <!-- =============================================================
-           Client testimonial. Hand-curated: the quote is copied in by
-           hand, not fetched. No API, no JS, no third-party script.
-
-           Why not the Google Places API: the `reviews` field bills at
-           Google's Enterprise tier, caps at 5 reviews chosen by Google,
-           and the Maps terms forbid storing review text. Review JSON-LD
-           on your own site is "self-serving" and ineligible for star
-           rich results, so do NOT add Review/AggregateRating markup.
-
-           TO UPDATE (~2 minutes):
-             1. Read your reviews:
-                https://maps.google.com/?cid=9936926971516108110
-             2. Replace the quote text, the name and the role below.
-             3. Keep it verbatim. Trim to ~45 words and mark any cut
-                with [&hellip;] &mdash; silent truncation is the honesty failure.
-             4. Adjust the star count and the visually-hidden "Rated N
-                out of 5." to match if it is ever not five.
-             5. git commit && git push origin main. Pages redeploys.
-
-           GOT A SECOND GOOD REVIEW? This layout is deliberately built
-           for one. Two quotes want a different composition &mdash; ask for
-           the "proof panel" or "accent rule" variant rather than
-           bolting a second <figure> onto this one.
-
-           NON-GOOGLE PROOF IS WELCOME HERE. The heading is "What
-           clients say", not "Google reviews", so a LinkedIn
-           recommendation or a client email works too &mdash; just change
-           the <cite> to name the real source.
-
-           TO ASK A CLIENT FOR A REVIEW: get the official short link
-           from Google Business Profile > "Ask for reviews". Note the
-           search.google.com/local/writereview endpoint needs the
-           ChIJ-style Place ID, NOT the numeric CID used above.
-           ============================================================= -->
-      <section class="section" id="testimonials" data-place-cid="9936926971516108110">
-        <div class="container">
-
+               TO UPDATE (~2 min): read https://maps.google.com/?cid=9936926971516108110
+               replace the quote verbatim, trim to ~55 words, mark any cut with
+               [&hellip;], adjust the star count and the hidden "Rated N out of 5."
+               This layout is built for ONE quote. A second wants a different
+               composition, not a second <figure>. -->
           <svg class="svg-sprite" aria-hidden="true">
             <symbol id="icon-star" viewBox="0 0 20 20">
               <path d="M10 1.6l2.58 5.23 5.77.84-4.17 4.07.98 5.75L10 14.77l-5.16 2.72.98-5.75L1.65 7.67l5.77-.84L10 1.6z"/>
             </symbol>
           </svg>
 
-          <figure class="testimonial-solo">
+          <figure class="testimonial">
             <div class="stars">
               <span class="visually-hidden">Rated 5 out of 5.</span>
               <svg class="star" aria-hidden="true"><use href="#icon-star"></use></svg>
@@ -171,25 +165,37 @@
             <blockquote cite="https://maps.google.com/?cid=9936926971516108110">
               <p>He took the time to understand what I wanted the website to achieve and translated that into a clean and credible site that reflects the business really well. [&hellip;] I'm really pleased with the finished website and would happily recommend Taninnovate to any business looking for a thoughtful, cost-conscious, and reliable web design partner.</p>
             </blockquote>
-            <figcaption class="testimonial-source">
-              <span class="testimonial-author">Samuel</span>
-              <cite>Prime Procurement &middot; Google review</cite>
+            <figcaption>
+              <span class="who">Samuel</span>
+              <cite>Prime Procurement &middot; <a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener">Google review</a></cite>
             </figcaption>
           </figure>
+        </div>
+      </section>
 
-          <div class="testimonial-actions">
-            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Let's talk</a>
-            <a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener" class="btn btn-outline">Read our reviews on Google &rarr;</a>
+      <section class="closing">
+        <div class="container">
+          <h2>Tell me what you need built.</h2>
+          <p class="lede">A half-hour call, no charge. You'll get a fixed quote and an honest answer about whether I'm the right person for it.</p>
+          <div class="signature">
+            <img src="images/tanin-profile.jpg" width="128" height="128" alt="Tanin">
+            <span class="who">Tanin Rojanapiansatith<span>Taninnovate &middot; 5.0 on Google</span></span>
           </div>
-
+          <div class="closing-actions">
+            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
+            <a href="contact.html" class="btn btn-outline">Send a message</a>
+            <!-- EMAIL: direct mailto goes here once Tanin supplies the address. -->
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>&copy; 2026 Taninnovate.</p>
+        <p>&copy; 2026 Taninnovate &mdash; built by Tanin Rojanapiansatith.</p>
         <ul class="footer-links">
+          <li><a href="work.html">Projects</a></li>
+          <li><a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener">Reviews</a></li>
           <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>

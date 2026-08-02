@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
+  <script>document.documentElement.className="js"</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects &mdash; Taninnovate</title>
-  <meta name="description" content="Projects by Taninnovate. Prime Procurement website for an energy procurement consultancy, Material Audit for iPad-based inspections, ToastHost for Toastmasters club management, Transcrybr for offline speech-to-text, and Blackheath Advisors website.">
+  <meta name="description" content="Five things I've built and shipped: Prime Procurement, Blackheath Advisors, Material Audit, Transcrybr and ToastHost. Websites and iPad apps for UK businesses.">
+  <link rel="canonical" href="https://taninnovate.com/work.html">
   <meta property="og:title" content="Projects &mdash; Taninnovate">
-  <meta property="og:description" content="Prime Procurement, Material Audit, ToastHost, Transcrybr, and Blackheath Advisors — projects by Taninnovate.">
+  <meta property="og:description" content="Five things I've built and shipped. Websites and iPad apps for UK businesses.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taninnovate.com/work.html">
+  <meta property="og:image" content="https://taninnovate.com/images/og-taninnovate.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Chivo+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +28,7 @@
     <header class="site-header">
       <nav class="container nav">
         <a href="index.html" class="nav-logo">
-          <img src="images/taninnovate-logo-300.png" alt="Taninnovate" class="nav-logo-img">
+          <img src="images/logo-white.png" alt="Taninnovate" class="nav-logo-img" width="130" height="120">
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
           <span class="nav-toggle-bar"></span>
@@ -38,109 +47,120 @@
     <main>
       <section class="page-header">
         <div class="container">
-          <h1>Projects</h1>
-          <p>Client work, products, and platforms we've built and shipped.</p>
+          <h1>Five things I've built and shipped.</h1>
+          <p class="lede">Client work and my own products. Every live one links straight through, so you can judge the work rather than take my word for it.</p>
         </div>
       </section>
 
-      <section id="prime-procurement" class="product-feature">
+      <section class="section">
         <div class="container">
-          <h2>Prime Procurement</h2>
-          <div class="tags">
-            <span class="tag">Website</span>
-            <span class="tag">Framer</span>
-            <span class="tag">Contract</span>
-          </div>
-          <p class="product-lead">A marketing website for an independent UK energy procurement consultancy advising on strategy, contracts, and tendering. Built on Framer with a CMS-backed Insights section, so the client can publish articles without touching code.</p>
-          <ul class="feature-list">
-            <li>Nine-page site spanning services, partners, insights, and contact</li>
-            <li>CMS-driven Insights section the client publishes to directly</li>
-            <li>Contact form wired through to the client's inbox</li>
-            <li>Responsive layouts tuned across desktop and phone</li>
-            <li>Custom domain wired and ownership transferred to the client</li>
-          </ul>
-          <a href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-md);">Visit Prime Procurement &rarr;</a>
+
+          <article class="entry" id="prime-procurement">
+            <div class="entry-body">
+              <h3><a href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener">Prime Procurement</a></h3>
+              <p>A marketing site for an independent UK energy procurement consultancy advising on strategy, contracts and tendering. Nine pages spanning services, partners, insights and contact, with a CMS-backed Insights section she publishes to without touching code.</p>
+              <dl class="spec">
+                <dt>Client</dt><dd>Energy procurement consultancy</dd>
+                <dt>Built on</dt><dd>Framer with a client-managed CMS</dd>
+                <dt>Scope</dt><dd>Nine pages, responsive, contact form wired to her inbox</dd>
+                <dt>Handover</dt><dd>Custom domain wired, ownership transferred</dd>
+              </dl>
+              <a class="entry-link" href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener">Visit Prime Procurement &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-prime-procurement.jpg" width="900" height="563" loading="lazy"
+                 alt="The Prime Procurement homepage: a violet hero reading &ldquo;Energy procurement, made simple and clear.&rdquo;">
+          </article>
+
+          <article class="entry entry--flip" id="material-audit">
+            <div class="entry-body">
+              <h3>Material Audit</h3>
+              <p>An iPad inspection and audit platform for demolition and construction. The team used to record material audits by hand &mdash; notes in a spreadsheet, photos on a phone, reconciled afterwards. Now they upload a floor plan, capture materials and photos on the spot, and generate the full report in one tap.</p>
+              <dl class="spec">
+                <dt>Client</dt><dd>Demolition contractor</dd>
+                <dt>Platform</dt><dd>iPad, built for use on site</dd>
+                <dt>Scope</dt><dd>On-site inspection, photo capture and annotation, report generation</dd>
+                <dt>Outcome</dt><dd class="out">Cut their auditing time by more than 5&times;</dd>
+              </dl>
+            </div>
+            <!-- No public artefact: built under contract, no public site or
+                 App Store listing. Say so rather than shipping a grey box.
+                 Replace this block with an <img class="entry-shot"> when a
+                 screenshot (redacted if needed) is available. -->
+            <div class="no-shot">
+              <span class="label">No public screenshot</span>
+              <p>Built under contract and used internally, so there's no public site to link to. I can walk you through it on a call.</p>
+            </div>
+          </article>
+
+          <article class="entry" id="transcrybr">
+            <div class="entry-body">
+              <h3><a href="https://www.transcrybr.com" target="_blank" rel="noopener">Transcrybr</a></h3>
+              <p>An offline speech-to-text app for iPhone and iPad. Transcribe live or upload audio files &mdash; everything is processed on device, so nothing leaves the phone. My own product, shipping on the App Store.</p>
+              <dl class="spec">
+                <dt>Platform</dt><dd>iOS and iPadOS, native</dd>
+                <dt>Features</dt><dd>Live dictation, speaking-pace feedback, file upload, Bluetooth mic support</dd>
+                <dt>Privacy</dt><dd>Fully offline &mdash; no audio leaves the device</dd>
+                <dt>Status</dt><dd>Shipping on the App Store</dd>
+              </dl>
+              <a class="entry-link" href="https://www.transcrybr.com" target="_blank" rel="noopener">Visit Transcrybr &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-transcrybr.jpg" width="900" height="563" loading="lazy"
+                 alt="The Transcrybr site: an iPhone showing live transcription with a words-per-minute dial, beside a Download on the App Store badge.">
+          </article>
+
+          <article class="entry entry--flip" id="toasthost">
+            <div class="entry-body">
+              <h3><a href="https://www.toasthost.co.uk" target="_blank" rel="noopener">ToastHost</a></h3>
+              <p>A club management platform for Toastmasters that handles meeting scheduling, role assignments and member management. Built to make running a speaking club less admin and more impact. I co-founded this one rather than building it to a brief.</p>
+              <dl class="spec">
+                <dt>Type</dt><dd>Web platform, co-founded</dd>
+                <dt>Scope</dt><dd>Meeting agendas, role rotation, member management, club performance</dd>
+                <dt>Model</dt><dd>Subscription, priced publicly</dd>
+                <dt>Status</dt><dd>Live and taking signups</dd>
+              </dl>
+              <a class="entry-link" href="https://www.toasthost.co.uk" target="_blank" rel="noopener">Visit ToastHost &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-toasthost.jpg" width="900" height="563" loading="lazy"
+                 alt="The ToastHost homepage: a deep blue hero reading &ldquo;You joined to speak, not to admin.&rdquo;">
+          </article>
+
+          <article class="entry" id="blackheath-advisors">
+            <div class="entry-body">
+              <h3><a href="https://www.blackheathadvisors.com" target="_blank" rel="noopener">Blackheath Advisors</a></h3>
+              <p>A professional website for a board advisory practice run by an experienced governance consultant working with Chairs and CEOs. The brief was something that reflects the calibre of her work and gives prospective clients confidence from the first visit.</p>
+              <dl class="spec">
+                <dt>Client</dt><dd>Board advisory practice</dd>
+                <dt>Built on</dt><dd>Wix, so she maintains it without me</dd>
+                <dt>Delivered</dt><dd class="out">Brief to live site in one week</dd>
+                <dt>Handover</dt><dd>Full ownership, no retainer</dd>
+              </dl>
+              <a class="entry-link" href="https://www.blackheathadvisors.com" target="_blank" rel="noopener">Visit Blackheath Advisors &rarr;</a>
+            </div>
+            <img class="entry-shot" src="images/work-blackheath-advisors.jpg" width="900" height="563" loading="lazy"
+                 alt="The Blackheath Advisors homepage: serif headings reading Governance, Leadership, Culture, Strategy, beside a boardroom photograph.">
+          </article>
+
         </div>
       </section>
 
-      <section id="material-audit" class="product-feature">
+      <section class="closing">
         <div class="container">
-          <h2>Material Audit</h2>
-          <div class="tags">
-            <span class="tag">iPad App</span>
-            <span class="tag">SaaS</span>
-            <span class="tag">Contract</span>
+          <h2>Yours could be next.</h2>
+          <p class="lede">A half-hour call, no charge. You'll get a fixed quote and an honest answer about whether I'm the right person for it.</p>
+          <div class="closing-actions">
+            <a href="https://calendly.com/tanin/new-meeting" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a>
+            <a href="contact.html" class="btn btn-outline">Send a message</a>
           </div>
-          <p class="product-lead">An iPad-based inspection and audit platform, built for demolition and construction.</p>
-          <p class="product-note">Built under contract for an external client.</p>
-          <ul class="feature-list">
-            <li>On-site inspections from iPad</li>
-            <li>Photo capture and annotation</li>
-            <li>Report generation</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="transcrybr" class="product-feature">
-        <div class="container">
-          <h2>Transcrybr</h2>
-          <div class="tags">
-            <span class="tag">iOS App</span>
-            <span class="tag">Subscription</span>
-          </div>
-          <p class="product-lead">An offline speech-to-text app for iPhone and iPad. Transcribe in real time or upload audio files &mdash; all processed on-device, with files encrypted and stored in iCloud.</p>
-          <ul class="feature-list">
-            <li>Live dictation with real-time transcription</li>
-            <li>Fully offline &mdash; no data leaves your device</li>
-            <li>Speaking pace feedback</li>
-            <li>Audio file upload and transcription</li>
-            <li>Bluetooth microphone support</li>
-          </ul>
-          <a href="https://www.transcrybr.com" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-md);">Visit Transcrybr &rarr;</a>
-        </div>
-      </section>
-
-      <section id="toasthost" class="product-feature">
-        <div class="container">
-          <h2>ToastHost</h2>
-          <div class="tags">
-            <span class="tag">Web Platform</span>
-            <span class="tag">Co-founded</span>
-          </div>
-          <p class="product-lead">A Toastmasters club management platform that handles meeting scheduling, role assignments, and member management. Built to make running a speaking club less admin and more impact.</p>
-          <ul class="feature-list">
-            <li>Meeting scheduling and agendas</li>
-            <li>Role assignments and rotation</li>
-            <li>Member management</li>
-            <li>Club performance tracking</li>
-          </ul>
-          <a href="https://www.toasthost.co.uk" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-md);">Visit ToastHost &rarr;</a>
-        </div>
-      </section>
-
-      <section id="blackheath-advisors" class="product-feature">
-        <div class="container">
-          <h2>Blackheath Advisors</h2>
-          <div class="tags">
-            <span class="tag">Website</span>
-            <span class="tag">Wix</span>
-            <span class="tag">Contract</span>
-          </div>
-          <p class="product-lead">A professional website for a board advisory practice working with Chairs and CEOs. We turned the client's requirements into a polished Wix site in one week &mdash; built on Wix so the client can maintain and update it independently.</p>
-          <ul class="feature-list">
-            <li>Designed and delivered in one week</li>
-            <li>Built on Wix for easy client self-maintenance</li>
-            <li>Professional presence reflecting high-calibre advisory work</li>
-          </ul>
-          <a href="https://www.blackheathadvisors.com" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-md);">Visit Blackheath Advisors &rarr;</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>&copy; 2026 Taninnovate.</p>
+        <p>&copy; 2026 Taninnovate &mdash; built by Tanin Rojanapiansatith.</p>
         <ul class="footer-links">
+          <li><a href="work.html">Projects</a></li>
+          <li><a href="https://maps.google.com/?cid=9936926971516108110" target="_blank" rel="noopener">Reviews</a></li>
           <li><a href="https://www.linkedin.com/in/tanin-rojanapiansatith/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
