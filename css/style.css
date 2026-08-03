@@ -381,20 +381,13 @@ a:hover { color: var(--brand-lift); }
   max-width: 68ch;
 }
 
-/* No public artefact: say so, don't ship a grey box. */
-.no-shot {
-  border: 1px dashed var(--rule-strong);
-  background: var(--paper-2);
-  padding: var(--space-xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-xs);
-  min-height: 220px;
+/* Why an entry has no outbound link. Not every project has a public URL. */
+.entry-note {
+  margin-top: var(--space-lg);
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  max-width: 46ch;
 }
-
-.no-shot .label { color: var(--ink-2); }
-.no-shot p { color: var(--ink-2); font-size: 0.9375rem; margin: 0; max-width: 34ch; }
 
 /* ================================
    8. Testimonial
