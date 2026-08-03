@@ -477,6 +477,29 @@ a:hover { color: var(--brand-lift); }
   margin-top: var(--space-xl);
 }
 
+.closing-direct {
+  margin-top: var(--space-lg);
+  font-size: 0.9375rem;
+  color: var(--on-brand-2);
+}
+
+/* The default link colour is the brand itself, which is invisible on an
+   oxblood surface. Any non-button link on brand inverts. */
+.hero a:not(.btn),
+.closing a:not(.btn),
+.page-header a:not(.btn),
+.on-brand a:not(.btn) {
+  color: var(--on-brand);
+  font-weight: 700;
+}
+
+.hero a:not(.btn):hover,
+.closing a:not(.btn):hover,
+.page-header a:not(.btn):hover,
+.on-brand a:not(.btn):hover {
+  color: var(--on-brand-2);
+}
+
 /* ================================
    10. Buttons
    ================================ */
