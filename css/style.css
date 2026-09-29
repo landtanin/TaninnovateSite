@@ -295,11 +295,6 @@ a:hover { color: var(--brand-lift); }
   box-shadow: 0 0 0 1px var(--on-brand-rule), 0 18px 50px rgb(0 0 0 / 0.28);
 }
 
-.hero-reel figcaption {
-  margin-top: var(--space-sm);
-  color: var(--on-brand-2);
-  line-height: 1.5;
-}
 .hero h1 .quiet { color: var(--on-brand-2); }
 
 .hero .lede {
