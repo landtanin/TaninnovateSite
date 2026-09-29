@@ -749,14 +749,19 @@ a:hover { color: var(--brand-lift); }
   .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 
-@media (min-width: 1024px) {
-  .entry { gap: clamp(2rem, 5vw, 4.5rem); }
-
+/* Copy left, reel right from tablet width up. The reel is vertically
+   centred against the copy so neither column leaves a dead gap. */
+@media (min-width: 768px) {
   .hero-inner {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "title reel" "lede reel" "actions reel";
-    column-gap: clamp(2rem, 4vw, 3.5rem);
+    column-gap: clamp(1.75rem, 4vw, 3.5rem);
   }
-  .hero-reel { margin-top: 0.4rem; }
+  .hero-reel { margin-top: 0; align-self: center; }
+  .hero .lede { margin-top: var(--space-lg); }
+}
+
+@media (min-width: 1024px) {
+  .entry { gap: clamp(2rem, 5vw, 4.5rem); }
 }
