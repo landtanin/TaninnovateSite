@@ -375,6 +375,25 @@ a:hover { color: var(--brand-lift); }
   font-size: 0.9375rem;
 }
 
+/* Reel: sits under the work heading, above the entries. */
+.reel { margin-bottom: var(--space-2xl); }
+
+.reel-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--brand);
+  border: 1px solid var(--rule);
+}
+
+.reel figcaption {
+  margin-top: var(--space-sm);
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  max-width: 68ch;
+}
+
 .section-note {
   margin-top: var(--space-xl);
   color: var(--ink-2);

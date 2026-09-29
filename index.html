@@ -83,6 +83,16 @@
             <span class="label">Every one is live &mdash; click through and judge it</span>
           </div>
 
+          <!-- 15-second reel. Muted so browsers allow autoplay; main.js starts it
+               only when on screen and never under prefers-reduced-motion.
+               Controls stay visible so anyone can pause or turn the sound on. -->
+          <figure class="reel">
+            <video class="reel-video" src="images/reel-taninnovate.mp4" poster="images/reel-poster.jpg"
+                   width="1280" height="720" muted loop playsinline controls preload="metadata"
+                   aria-describedby="reel-caption"></video>
+            <figcaption id="reel-caption">Fifteen seconds of recent builds: CalMagic and Transcrybr, my own App Store apps; Material Audit, the iPad app for a demolition contractor (shown with sample data); and the Prime Procurement site.</figcaption>
+          </figure>
+
           <article class="entry">
             <div class="entry-body">
               <h3><a href="https://www.primeprocurement.co.uk" target="_blank" rel="noopener">Prime Procurement</a></h3>
