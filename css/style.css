@@ -266,16 +266,51 @@ a:hover { color: var(--brand-lift); }
 
 .hero-inner { padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2.5rem, 6vw, 4.5rem); }
 
-.hero h1 { max-width: 16ch; }
+/* Grid, not a wrapper div, so source order can differ from visual order:
+   phones read headline, reel, lede, actions; wide screens put the copy in
+   the left column and the reel on the right. minmax(0, …) so the video's
+   1280px intrinsic width can never push a track wider than the viewport. */
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "title" "reel" "lede" "actions";
+  align-items: start;
+}
+
+.hero h1 {
+  grid-area: title;
+  max-width: 16ch;
+  font-size: clamp(2.125rem, 4.4vw, 3.75rem);
+}
+
+.hero-reel { grid-area: reel; margin-top: var(--space-xl); min-width: 0; }
+
+.reel-video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--brand-deep);
+  box-shadow: 0 0 0 1px var(--on-brand-rule), 0 18px 50px rgb(0 0 0 / 0.28);
+}
+
+.hero-reel figcaption {
+  margin-top: var(--space-sm);
+  color: var(--on-brand-2);
+  line-height: 1.5;
+}
 .hero h1 .quiet { color: var(--on-brand-2); }
 
 .hero .lede {
-  margin-top: var(--space-lg);
+  grid-area: lede;
+  margin-top: var(--space-xl);
   color: var(--on-brand-2);
   font-weight: 300;
 }
 
 .hero-actions {
+  grid-area: actions;
   display: flex;
   gap: var(--space-sm);
   flex-wrap: wrap;
@@ -373,25 +408,6 @@ a:hover { color: var(--brand-lift); }
   margin-top: var(--space-lg);
   font-weight: 700;
   font-size: 0.9375rem;
-}
-
-/* Reel: sits under the work heading, above the entries. */
-.reel { margin-bottom: var(--space-2xl); }
-
-.reel-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  background: var(--brand);
-  border: 1px solid var(--rule);
-}
-
-.reel figcaption {
-  margin-top: var(--space-sm);
-  color: var(--ink-2);
-  font-size: 0.9375rem;
-  max-width: 68ch;
 }
 
 .section-note {
@@ -735,4 +751,12 @@ a:hover { color: var(--brand-lift); }
 
 @media (min-width: 1024px) {
   .entry { gap: clamp(2rem, 5vw, 4.5rem); }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "title reel" "lede reel" "actions reel";
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+  }
+  .hero-reel { margin-top: 0.4rem; }
 }
